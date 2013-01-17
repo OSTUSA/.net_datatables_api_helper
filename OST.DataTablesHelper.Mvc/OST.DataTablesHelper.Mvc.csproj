@@ -104,9 +104,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Framework\BaseControllers\DataTableApiController.cs" />
+    <Compile Include="Framework\ModelBinders\DataTableModelBinder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataTableColumn.cs" />
+    <Compile Include="Models\DataTableModel.cs" />
+    <Compile Include="Models\DataTableProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,7 +131,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
