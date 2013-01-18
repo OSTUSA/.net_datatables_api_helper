@@ -1,4 +1,5 @@
 ﻿using System.Collections.Specialized;
+using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.ModelBinding;
 using OST.DataTablesHelper.Mvc.Models;
@@ -23,8 +24,12 @@ namespace OST.DataTablesHelper.Mvc.Framework.ModelBinders
             // INITIALIZE QUERY STRING DICTIONARY
             foreach (var param in parameters)
             {
-                var split = param.Split('=');
-                qs.Add(split[0], split[1]);
+                var urlDecodedParam = HttpUtility.UrlDecode(param);
+                if (urlDecodedParam != null)
+                {
+                    var split = urlDecodedParam.Split('=');
+                    qs.Add(split[0], split[1]);
+                }
             }
             p.QueryStrings = qs;
 
