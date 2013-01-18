@@ -15,7 +15,7 @@ namespace OST.DataTablesHelper.Mvc.Controllers
         public DataTableModel Get([ModelBinder(typeof (DataTableModelBinder))] DataTableProperties dt)
         {
             // populate your DataTableModel object here
-            return new DataTableModel();
+            return new DataTableModel() { };
         }
     }
 }

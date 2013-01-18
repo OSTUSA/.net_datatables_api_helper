@@ -6,9 +6,9 @@
 //using System.Linq.Dynamic;
 //using System.Reflection;
 //using System.Web.Http;
-//using NationalFlavors.Portal.Web.Models;
+//using .Portal.Web.Models;
 
-//namespace NationalFlavors.Portal.Web.Framework
+//namespace .Portal.Web.Framework
 //{
 //    public class DataTableApiController : ApiController
 //    {

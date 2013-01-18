@@ -1,7 +1,12 @@
-Entity Framework + WebApi + DataTables.net = ef_datatables_api_helper
+##Entity Framework + WebApi + DataTables.net = ef_datatables_api_helper
+
+========================
+### Overview
+
+Some helper classes to assist with the smooth integration of IEnumerable entities through web-api controllers to power server side processing of DataTables.net grids. 
 
 ========================
 
-Some helper classes to assist with the smooth integration of EF5 entities through web-api controllers to power server side processing of DataTables.net grids. 
+### Documentation
 
-Coming soon...
+Right now the best way to dive in is to watch the [INTRODUCTION SCREENCAST](http://www.screencast.com/t/BDuto43iJ "DataTables.net MVC Helpers Intro").
