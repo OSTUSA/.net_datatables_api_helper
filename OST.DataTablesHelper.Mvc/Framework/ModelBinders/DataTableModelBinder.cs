@@ -1,10 +1,9 @@
 ﻿using System.Collections.Specialized;
 using System.Web.Http.Controllers;
+using System.Web.Http.ModelBinding;
 using OST.DataTablesHelper.Mvc.Models;
-using IModelBinder = System.Web.Http.ModelBinding.IModelBinder;
-using ModelBindingContext = System.Web.Http.ModelBinding.ModelBindingContext;
 
-namespace NationalFlavors.Portal.Web.Framework
+namespace OST.DataTablesHelper.Mvc.Framework.ModelBinders
 {
     public class DataTableModelBinder : IModelBinder
     {

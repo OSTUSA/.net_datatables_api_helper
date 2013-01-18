@@ -15,9 +15,9 @@ namespace OST.DataTablesHelper.Mvc
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //ModelBinders.Binders.Add(typeof(DataTableProperties), new DataTableModelBinder());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
