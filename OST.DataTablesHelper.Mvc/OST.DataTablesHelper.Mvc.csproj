@@ -105,7 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\SampleApiController.cs" />
+    <Compile Include="Controllers\SampleCustomApiController.cs" />
     <Compile Include="Framework\BaseControllers\DataTableApiController.cs" />
+    <Compile Include="Framework\DynamicLibrary.cs" />
     <Compile Include="Framework\ModelBinders\DataTableModelBinder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

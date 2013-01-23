@@ -5,20 +5,18 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
-using OST.DataTablesHelper.Mvc.Framework.BaseControllers;
 using OST.DataTablesHelper.Mvc.Framework.ModelBinders;
 using OST.DataTablesHelper.Mvc.Models;
 
 namespace OST.DataTablesHelper.Mvc.Controllers
 {
-    public class SampleApiController : DataTableApiController
+    public class SampleCustomApiController : ApiController
     {
         public DataTableModel Get([ModelBinder(typeof (DataTableModelBinder))] DataTableProperties dt)
         {
-            // Retreive your IQueryable collection
-            var queryableCollection = new List<Object>().AsQueryable();
-            // Let the Base Controller do the rest (i.e. Searching, Paging, Sort Order)
-            return ConstructDataTableModel(queryableCollection, queryableCollection.Count(), dt);
+            // Populate your DataTableModel object here
+            // -- use this method when you want to implement searching, paging & sorting yourself
+            return new DataTableModel() { };
         }
     }
 }
