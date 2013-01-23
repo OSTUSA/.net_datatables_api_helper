@@ -17,7 +17,7 @@ namespace OST.DataTablesHelper.Mvc.Controllers
         {
             // Retreive your IQueryable collection
             var queryableCollection = new List<Object>().AsQueryable();
-            // Let the Base Controller do the rest (i.e. Searching, Paging, Sort Order)
+            // Let the Base Controller do the rest (i.e. Searching, Paging, Sort Order, Data Trimming)
             return ConstructDataTableModel(queryableCollection, queryableCollection.Count(), dt);
         }
     }
