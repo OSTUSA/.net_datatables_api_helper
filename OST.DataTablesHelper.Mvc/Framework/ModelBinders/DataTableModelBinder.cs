@@ -12,12 +12,9 @@ namespace OST.DataTablesHelper.Mvc.Framework.ModelBinders
         {
         }
 
-        public bool BindModel(HttpActionContext actionContext, ModelBindingContext modelBindingContext)
+        public DataTableProperties GeneratePropertiesModel(string query)
         {
-            
             var p = new DataTableProperties();
-
-            var query = actionContext.ControllerContext.Request.RequestUri.Query;
             var parameters = query.Replace("?", "").Split('&');
             var qs = new NameValueCollection();
 
@@ -76,8 +73,12 @@ namespace OST.DataTablesHelper.Mvc.Framework.ModelBinders
                 }
             }
 
-            modelBindingContext.Model = p;
+            return p;
+        }
 
+        public bool BindModel(HttpActionContext actionContext, ModelBindingContext modelBindingContext)
+        {
+            modelBindingContext.Model = GeneratePropertiesModel(actionContext.ControllerContext.Request.RequestUri.Query);
             return true;
         }
 
