@@ -1,4 +1,4 @@
-##Entity Framework + WebApi + DataTables.net = ef_datatables_api_helper
+##.Net MVC WebApi + DataTables.net = .net_datatables_api_helper
 
 ========================
 ### Overview
